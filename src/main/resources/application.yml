@@ -1,0 +1,32 @@
+spring:
+  profiles:
+    active: dev
+---
+server:
+  port: 80
+
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/ssm_db?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC
+    username: root
+    password: 123456
+  config:
+    activate:
+      on-profile: dev
+---
+server:
+  port: 80
+
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/ssm_db?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC
+    username: root
+    password: 080900
+  config:
+    activate:
+      on-profile: pro
+---
